@@ -1,5 +1,4 @@
 #include "main.h"
-
 /**
  * prints the alphabet, in lowercase
  *
