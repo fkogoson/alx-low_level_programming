@@ -2,6 +2,7 @@
 
 /**
  * _isalpha - Checks if a character is alphabet or not.
+ * @c: The character to be checked.
  *
  * Return: 1 if character is letter, lowercase or uppercase, 0 otherwise.
  */
