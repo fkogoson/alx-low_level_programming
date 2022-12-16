@@ -2,6 +2,8 @@
 
 /**
  * print_numbers -  prints the numbers, from 0 to 9
+ *
+ * Retuen: void
  */
 void print_numbers(void)
 {
