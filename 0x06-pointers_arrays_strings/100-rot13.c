@@ -1,21 +1,27 @@
 #include "main.h"
 
 /**
- * _strncat - The _strncat function is similar to the _strcat function,
- *	except that it will use at most n bytes from src; and
- *	src does not need to be null-terminated if it contains n or more bytes
- * @dest: the string to be appended
- * @src: The string to appended to dest
- * @n: The nomber of bytes from src to be appended to dest
- * Return: A pointer to the resulting string dest
+ * rot13 - encodes a string into rot13
+ * @s: string to encode
+ *
+ * Return: address of s
  */
-char *_strncat(char *dest, char *src, int n)
+char *rot13(char *s)
 {
-	int index = 0, dest_len = 0;
+	int i, j;
+	char a[] = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+	char b[] = "nopqrstuvwxyzabcdefghijklmNOPQRSTUVWXYZABCDEFGHIJKLM";
 
-	while (dest[index++])
-		dest_len++;
-	for (index = 0; src[index] && index < n; index++)
-		dest[dest_len++] = src[index];
-	return (dest);
+	for (i = 0; *(s + i); i++)
+	{
+		for (j = 0; j < 52; j++)
+		{
+			if (a[j] == *(s + i))
+			{
+				*(s + i) = b[j];
+				break;
+			}
+		}
+	}
+	return (s);
 }
