@@ -2,8 +2,8 @@
 
 /**
  *factorial - finds the factorial
- *@n- integer to find then factorial
- *return: returns an integer
+ *@n: integer to find then factorial
+ *Return: returns an integer
  */
 
 int factorial(int n)
